@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="Library">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="coverage-html"
+             target="./tests/log/codeCoverage"
+             lowUpperBound="50"
+             highLowerBound="80"
+             showUncoveredFiles="false"/>
+        <!-- <log type="testdox-html" target="./log/testdox.html" /> -->
+    </logging>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">tests</directory>
+        </whitelist>
+    </filter>
+</phpunit>
